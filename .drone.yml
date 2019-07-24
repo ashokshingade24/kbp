@@ -18,4 +18,8 @@ pipeline:
     repo: ashokshingade24/frontend
     tags: [latest, v1]
     secrets: [ docker_username, docker_password ]
+  kubectl:
+    image: dstrebel/drone-kubectl-helm
+    secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
+    kubectl: "apply -f ./frontend/deployment.yaml"
 
