@@ -5,3 +5,10 @@ pipeline:
     commands:
       - cd frontend
       - npm i redis --save
+  test:
+    image: node
+    commands:
+      - cd frontend
+      - npm i redis --save
+      - npm test
+
