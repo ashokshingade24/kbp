@@ -11,4 +11,11 @@ pipeline:
       - cd frontend
       - npm i redis --save
       - npm test
+  publish:
+    image: plugins/docker
+    dockerfile: ./frontend/Dockerfile
+    context: ./frontend
+    repo: ashokshingade24/frontend
+    tags: [latest, v1]
+    secrets: [ docker_username, docker_password ]
 
