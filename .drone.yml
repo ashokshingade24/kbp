@@ -1,4 +1,4 @@
-# Drone Pipeline
+# Drone CICD Pipeline
 pipeline:
   build:
     image: node
