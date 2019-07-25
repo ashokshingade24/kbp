@@ -21,5 +21,8 @@ pipeline:
   kubectl:
     image: dstrebel/drone-kubectl-helm
     secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
-    kubectl: "apply -f ./frontend/deployment.yaml"
+    kubectl: "apply -f ./frontend/frontend.yaml"
+    kubectl: "apply -f ./frontend/frontend-svc.yaml"
+    kubectl: "apply -f ./frontend/ingress.yaml"
+    kubectl: "apply -f ./frontend/binding.yml"
 
